@@ -1,0 +1,27 @@
+<section class="p-4">
+  <h1 class="text-4xl">Metals</h1>
+  <div class="relative overflow-x-auto">
+    <table class="realative w-full text-gray-400" id="metals">
+      <thead class="bg-gray-700 text-gray-200 border-b border-gray-400">
+        <tr>
+          <th
+            *ngFor="let col of columns"
+            class="sticky top-0 border border-gray-600"
+          >
+            <span class="table-head-rotated p-2">{{ col }}</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="divide-y">
+        <tr *ngFor="let metal of metals" class="border border-gray-600">
+          <td
+            *ngFor="let col of columns"
+            class="p-2 border border-gray-600 hover:bg-gray-700"
+          >
+            {{ metal[col] }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
