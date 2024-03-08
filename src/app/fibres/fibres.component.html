@@ -1,5 +1,5 @@
 <section class="p-4">
-  <h1 class="text-4xl pb-4">Metals</h1>
+  <h1 class="text-4xl pb-4">Fibres</h1>
   <div class="relative">
     <table class="realative w-full text-gray-400" id="metals">
       <thead
@@ -13,11 +13,11 @@
       </thead>
       <tbody>
         <tr
-          *ngFor="let metal of metals"
+          *ngFor="let fibre of fibres"
           class="border border-gray-600 hover:bg-gray-700"
         >
           <td *ngFor="let col of columns" class="p-2 border border-gray-600">
-            {{ metal[col] }}
+            {{ fibre[col] }}
           </td>
         </tr>
       </tbody>

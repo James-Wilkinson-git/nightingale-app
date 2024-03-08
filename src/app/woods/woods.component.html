@@ -1,7 +1,7 @@
 <section class="p-4">
-  <h1 class="text-4xl pb-4">Metals</h1>
+  <h1 class="text-4xl pb-4">Woods</h1>
   <div class="relative">
-    <table class="realative w-full text-gray-400" id="metals">
+    <table class="realative w-full text-gray-400" id="woods">
       <thead
         class="sticky top-0 uppercase text-sm tracking-widest bg-gray-700 text-gray-200 border-b border-gray-400"
       >
@@ -13,11 +13,11 @@
       </thead>
       <tbody>
         <tr
-          *ngFor="let metal of metals"
+          *ngFor="let wood of woods"
           class="border border-gray-600 hover:bg-gray-700"
         >
           <td *ngFor="let col of columns" class="p-2 border border-gray-600">
-            {{ metal[col] }}
+            {{ wood[col] }}
           </td>
         </tr>
       </tbody>

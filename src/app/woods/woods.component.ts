@@ -3,21 +3,21 @@ import { ApiService } from '../api-service.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-metals',
+  selector: 'app-woods',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './metals.component.html',
-  styleUrl: './metals.component.scss',
+  templateUrl: './woods.component.html',
+  styleUrl: './woods.component.scss',
 })
-export class MetalsComponent {
-  metals: any[] = [];
+export class WoodsComponent {
+  woods: any[] = [];
   columns: any[] = [];
   constructor(private apiService: ApiService) {}
 
   ngOnInit() {
-    this.apiService.getData('metals').subscribe((data: any) => {
-      this.metals = data;
-      Object.keys(this.metals[0]).forEach((key) => {
+    this.apiService.getData('woods').subscribe((data: any) => {
+      this.woods = data;
+      Object.keys(this.woods[0]).forEach((key) => {
         this.columns.push(key);
       });
     });

@@ -7,7 +7,8 @@
         src="/assets/nightingale-logo.png"
         width="200"
         alt="Nightingal Logo"
-    /></a>
+      />Crafting Database</a
+    >
     <nav aria-label="menu nav" class="bg-gray-800">
       <ul class="flex flex-row align-middle">
         <li>
@@ -23,17 +24,54 @@
           <a
             class="block mx-4 p-4 rounded hover:bg-slate-600"
             routerLink="woods"
-            routerLinkActive="active"
+            routerLinkActive="bg-slate-500"
             ariaCurrentWhenActive="page"
             >Woods</a
+          >
+        </li>
+        <li>
+          <a
+            class="block mx-4 p-4 rounded hover:bg-slate-600"
+            routerLink="fibres"
+            routerLinkActive="bg-slate-500"
+            ariaCurrentWhenActive="page"
+            >Fibres</a
+          >
+        </li>
+        <li>
+          <a
+            class="block mx-4 p-4 rounded hover:bg-slate-600"
+            routerLink="gems"
+            routerLinkActive="bg-slate-500"
+            ariaCurrentWhenActive="page"
+            >Gems</a
+          >
+        </li>
+        <li>
+          <a
+            class="block mx-4 p-4 rounded hover:bg-slate-600"
+            routerLink="hides"
+            routerLinkActive="bg-slate-500"
+            ariaCurrentWhenActive="page"
+            >Hides</a
           >
         </li>
       </ul>
     </nav>
   </header>
   <main>
-    <div class="flex flex-col md:flex-row">
-      <nav aria-label="alternate nav"></nav>
+    <div class="flex flex-col">
+      <aside class="p-4">
+        <h2 class="text-2xl">How to use:</h2>
+        <p>
+          Each craftable item has base stats, these materials enchance existing
+          base stats. If an item doesn't have max health, you can't add max
+          health the modifier will be ignored. The item will in most cases take
+          on the colour of the first element in the crafting list, with
+          accessories like buttons and buckles also taking on colours of the
+          metal used.
+        </p>
+      </aside>
       <router-outlet></router-outlet>
     </div>
   </main>
