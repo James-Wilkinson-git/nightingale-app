@@ -7,13 +7,15 @@
       >
         <tr>
           <th *ngFor="let col of columns" class="border border-gray-600">
-            <span class="table-head-rotated p-2">{{ col }}</span>
+            <span class="table-head-rotated p-2"
+              ><button (click)="sortBy(col)">{{ col }}</button></span
+            >
           </th>
         </tr>
       </thead>
       <tbody>
         <tr
-          *ngFor="let wood of woods"
+          *ngFor="let wood of woods$ | async"
           class="border border-gray-600 hover:bg-gray-700"
         >
           <td *ngFor="let col of columns" class="p-2 border border-gray-600">

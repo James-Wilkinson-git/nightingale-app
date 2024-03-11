@@ -7,7 +7,9 @@
       >
         <tr>
           <th *ngFor="let col of columns" class="border border-gray-600">
-            <span class="table-head-rotated p-2">{{ col }}</span>
+            <span class="table-head-rotated p-2"
+              ><button (click)="sortBy(col)">{{ col }}</button></span
+            >
           </th>
         </tr>
       </thead>
