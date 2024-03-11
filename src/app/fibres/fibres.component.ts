@@ -25,21 +25,28 @@ export class FibresComponent {
   }
 
   sortBy(column: string) {
+    //Read the sorted column signal and see if it is equal to the column passed meaning we want to switch direction on this column
     if (this.sortedColumn() === column) {
-      // Toggle sorting direction by calling the Signal as a function with a new value
+      // use .set to set the new value of the signal
       this.ascending.set(!this.ascending());
     } else {
+      //otherwise we are on a new column set the sorted column
       this.sortedColumn.set(column);
+      //then tell that column we want asc to start
       this.ascending.set(true);
     }
+    //call the sorting function
     this.sortData();
   }
 
   private sortData() {
+    //read the direction from the signal
     const direction = this.ascending() ? 1 : -1;
+    // read the column form the signal
     const column = this.sortedColumn();
 
     if (column) {
+      //sort the array
       this.fibres.sort((a, b) => {
         if (a[column] < b[column]) {
           return -1 * direction;
